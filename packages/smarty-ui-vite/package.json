@@ -11,8 +11,7 @@
     "docs:serve": "vitepress serve docs",
     "test": "vitest",
     "test:run": "vitest run",
-    "prepare": "husky install",
-    "lint": "eslint --fix --ext .ts,.vue src"
+    "lint": ""
   },
   "keywords": [],
   "author": "",
