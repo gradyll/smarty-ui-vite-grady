@@ -1,7 +1,7 @@
 import SmartyUI from './entry';
 const s: string = "hello wrold"
 import { createApp } from "vue/dist/vue.esm-browser";
-import SButton from './button/index';
+import { SButton } from './Button/index';
 // import SFCButton from './SFCButton.vue'
 createApp({
   template: `

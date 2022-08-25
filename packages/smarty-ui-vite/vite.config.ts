@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig, UserConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import Unocss from "./config/unocss";
@@ -11,12 +11,11 @@ const rollupOptions = {
     },
     // chunkFileNames: "assets/js/[name]-[hash].js",
     // entryFileNames: "assets/js/[name]-[hash].js",
-    assetFileNames: "assets/[name].[ext]"
+    assetFileNames: "style.[ext]"
   }
 }
 
-
-export default defineConfig({
+export const config = {
   plugins: [
     vue(),
     vueJsx(),
@@ -40,6 +39,7 @@ export default defineConfig({
       fileName: 'smarty-ui',
       formats: ["esm", "umd", "iife"]
     },
+    outDir: "./dist",
   },
   test: {
     // enable jest-like global test APIs
@@ -52,4 +52,7 @@ export default defineConfig({
       web: [/.[tj]sx$/]
     }
   }
-})
+}
+
+
+export default defineConfig(config as UserConfig)

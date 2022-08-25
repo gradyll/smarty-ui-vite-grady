@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "pnpm build:components",
+    "build:all": "vite build",
+    "build:components": "esno ./scripts/build.ts",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
@@ -45,6 +47,7 @@
   },
   "dependencies": {
     "@types/node": "^18.7.5",
+    "fs-extra": "^10.1.0",
     "vite": "3.0.7",
     "vue": "3.2.37"
   },
